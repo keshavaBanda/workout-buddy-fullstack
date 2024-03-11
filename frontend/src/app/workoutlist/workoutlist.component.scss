@@ -1,0 +1,36 @@
+.text-66bead {
+  color: #17ad80;
+}
+
+.h-30 {
+  height: 35% !important;
+}
+
+.abc {
+  cursor: pointer;
+}
+
+.records-not-found {
+  display: flex;
+  justify-content: center;
+
+  h2 {
+    text-align: center;
+  }
+
+}
+
+.list-height {
+  height: 550px;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+}
+
+.item:first-child {
+  margin-top: 0 !important;
+}
+
+app-workoutlist {
+  width: 100%;
+}

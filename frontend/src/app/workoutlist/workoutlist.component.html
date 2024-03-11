@@ -1,0 +1,42 @@
+<div class="list-height overflow-auto">
+  <div class="me-2">
+
+    <ng-template *ngIf="workoutList.length > 0; then items else noItems">
+    </ng-template>
+
+    <ng-template #items>
+      <div class="row w-100 item">
+        <div class="col-12 col-md-6 p-0" *ngFor="let item of workoutList">
+
+          <div class="card m-1 p-2">
+            <div class="row align-items-center m-0 h-30">
+              <div class="col-6 p-0">
+                <h5 class=" fw-bold text-66bead m-0">{{item.title}}</h5>
+              </div>
+              <div class="col-6 text-end p-0 h-100 pt-2">
+                <a (click)="deleteWorkOut(item._id)"
+                  class="bi-trash3 text-dark bg-body-secondary rounded-5 py-1 px-2 mt-5 abc"></a>
+              </div>
+            </div>
+
+            <p class="fw-semibold m-0">Load (kg) {{item.load}}</p>
+            <p class="fw-semibold m-0">Reps: {{item.reps}}</p>
+            <p class="m-0 mb-1">updated At: {{item.updatedAt | date}}</p>
+          </div>
+
+
+        </div>
+      </div>
+    </ng-template>
+
+    <ng-template #noItems>
+      <div class="records-not-found">
+        <div>
+          <img src="../../assets/not-found.png" alt="Records not found" width="350">
+          <h2>No Records Found !</h2>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+
+</div>

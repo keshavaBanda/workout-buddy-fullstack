@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="card p-4">
+    <form [formGroup]="workoutform" (ngSubmit)="addWorkOut()">
+      <div class="row">
+        <div class="col-12 ">
+          <p class="fw-bold text-center fontsize">Add a New Workout</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <label>Exercise Title:</label>
+          <input type="text" [formControl]="workoutform.controls['title']" size="30" class="form-control mb-2" placeholder="Enter Title">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <label>Load (in kg):</label>
+          <input type="text" [formControl]="workoutform.controls['load']" size="30" class="form-control mb-2" placeholder="Enter Load (in KGs)">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <label>Repetations:</label>
+          <input type="text" [formControl]="workoutform.controls['reps']" size="30" class="form-control mb-2" placeholder="Enter Repetations">
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-12">
+          <button type="submit" class="btn btn-success" [disabled]="workoutform.invalid">Add Workout</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+</div>
+
+
+<!-- <button type="submit" (click)="sendMessage()">send message</button> -->
